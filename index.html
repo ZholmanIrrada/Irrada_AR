@@ -3,22 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sketchfab 3D Модель Мысалы</title>
+  <title>3D Модель Мысалы</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 2em;
+    }
+    model-viewer {
+      width: 400px;
+      height: 400px;
+      margin: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f0f0f0;
+    }
+    button {
+      margin-top: 1em;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Sketchfab-тен алынған 3D модель</h1>
+  <h1>Сөз: Алма 🍎</h1>
+  <p>Мынау – алманың 3D моделі. Оны айналдырып көріңіз!</p>
 
-  <iframe
-    title="3D модель"
-    width="640"
-    height="480"
-    src="https://skfb.ly/o7nHS"
-    frameborder="0"
-    allow="autoplay; fullscreen; vr"
-    mozallowfullscreen="true"
-    webkitallowfullscreen="true"
-  ></iframe>
+  <model-viewer 
+    src="https://modelviewer.dev/shared-assets/models/Apple.glb" 
+    alt="3D алма моделі" 
+    auto-rotate 
+    camera-controls 
+    shadow-intensity="1">
+  </model-viewer>
+
+  <br/>
+
+  <button onclick="playAudio()">Дыбысын тыңдау</button>
+  <audio id="wordAudio" src="https://ssl.gstatic.com/dictionary/static/sounds/20200429/apple--_us_1.mp3"></audio>
+
+  <script>
+    function playAudio() {
+      document.getElementById('wordAudio').play();
+    }
+  </script>
 
 </body>
 </html>
