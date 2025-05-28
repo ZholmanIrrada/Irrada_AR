@@ -9,21 +9,36 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      margin: 2em;
+      background: #f9f9f9;
+      padding: 20px;
     }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    button {
+      background: #27ae60;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #219150;
+    }
+
     model-viewer {
       width: 400px;
       height: 400px;
-      margin: auto;
+      margin: 20px auto;
       border: 1px solid #ccc;
       border-radius: 8px;
-      background-color: #f0f0f0;
-    }
-    button {
-      margin-top: 1em;
-      padding: 0.5em 1em;
-      font-size: 1em;
-      cursor: pointer;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -40,14 +55,12 @@
     shadow-intensity="1">
   </model-viewer>
 
-  <br/>
-
   <button onclick="playAudio()">Дыбысын тыңдау</button>
   <audio id="wordAudio" src="https://ssl.gstatic.com/dictionary/static/sounds/20200429/apple--_us_1.mp3"></audio>
 
   <script>
     function playAudio() {
-      document.getElementById('wordAudio').play();
+      document.getElementById("wordAudio").play();
     }
   </script>
 
