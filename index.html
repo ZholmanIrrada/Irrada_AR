@@ -1,70 +1,49 @@
 <!DOCTYPE html>
-<html lang="kk">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3D Модель Мысалы</title>
-
-  <!-- Model Viewer кітапханасы -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f9f9f9;
-      padding: 20px;
-    }
-
-    h1 {
-      color: #2c3e50;
-    }
-
-    model-viewer {
-      width: 400px;
-      height: 400px;
-      margin: auto;
-    }
-
-    button {
-      background: #27ae60;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #219150;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>English Grammar A1-A2</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <header>
+    <h1>Ағылшын грамматикасы: A1 деңгей</h1>
+    <p>To be (am/is/are) ережесі</p>
+  </header>
 
-  <h1>Сөз: Алма 🍎</h1>
+  <main>
+    <section class="grammar-card">
+      <h2>To be (am/is/are)</h2>
+      <p><strong>Түсіндірме:</strong> "To be" – болу етістігі. Жекеше және көпше түрге байланысты өзгереді.</p>
+      <ul>
+        <li>I <strong>am</strong> a student. – Мен студентпін.</li>
+        <li>She <strong>is</strong> happy. – Ол бақытты.</li>
+        <li>They <strong>are</strong> at home. – Олар үйде.</li>
+      </ul>
 
-  <p>Мынау – алманың 3D моделі. Оны айналдырып көріңіз!</p>
+      <div class="audio-section">
+        <p>Мысалды тыңдаңыз:</p>
+        <audio controls>
+          <source src="audio/to-be.mp3" type="audio/mpeg">
+          Аудио қолжетімсіз.
+        </audio>
+      </div>
 
-  <model-viewer 
-    src="assets/apples.glb" 
-    alt="3D алма моделі" 
-    auto-rotate 
-    camera-controls 
-    shadow-intensity="1">
-  </model-viewer>
+      <div class="model-section">
+        <p>3D модель арқылы түсіндірме:</p>
+        <iframe title="To be grammar model" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+          allow="autoplay; fullscreen; xr-spatial-tracking"
+          xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+          width="100%" height="400"
+          src="https://sketchfab.com/models/a5e4cf2f3ad44ff3ac54fb55eac4db53/embed">
+        </iframe>
+      </div>
+    </section>
+  </main>
 
-  <br>
-
-  <button onclick="playAudio()">Дыбысын тыңдау</button>
-  <audio id="wordAudio" src="https://ssl.gstatic.com/dictionary/static/sounds/20200429/apple--_us_1.mp3"></audio>
-
-  <script>
-    function playAudio() {
-      document.getElementById("wordAudio").play();
-    }
-  </script>
-
+  <footer>
+    <p>© 2025 English Grammar A1-A2. Барлық құқықтар қорғалған.</p>
+  </footer>
 </body>
 </html>
